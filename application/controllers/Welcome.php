@@ -21,25 +21,8 @@ class Welcome extends CI_Controller {
 	public function index()
 
 	{
-			$url="http://www.eporner.com/api_xml/hd/15";
 
-		    $this->load->library('MovieLoader');
-		    $mL=new movieLoader();
-		    $db=null;
-			try{
-				$db=$mL->readDatabase($url);
-			   }
-		catch(Exception $e)
-				{
-					log_message("erorr","read ULR==> ".$url." <==error");
-				}
-            //var_dump($db[0]->imgthumb);
-		$data = array(
-
-			'db'=>$db
-	);
-
-		$this->load->view('main_page',$data);
+		$this->load->view('index');
 
 
 	}
